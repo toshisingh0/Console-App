@@ -3,6 +3,5 @@ class Student < ApplicationRecord
  validates :email, presence: true, uniqueness: true
   has_many :enrollments, dependent: :destroy
 
- has_many :courses, through: :enrollments	
-
+ has_many :courses, through: :enrollments
 end

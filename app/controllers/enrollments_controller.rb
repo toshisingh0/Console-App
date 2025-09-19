@@ -1,5 +1,5 @@
 class EnrollmentsController < ApplicationController
-  # before_action :set_student
+   # before_action :set_student
 
 
 
@@ -12,11 +12,11 @@ class EnrollmentsController < ApplicationController
     end
   end
 
-	 def new
-	  @enrollment = Enrollment.new
-	  @courses = Course.all 
+   def new
+    @enrollment = Enrollment.new
+    @courses = Course.all
     @students = Student.all  # courses student is not already enrolled in
-	end
+  end
 
   def create
     @course = Course.find(params[:enrollment][:course_id])
@@ -41,5 +41,4 @@ class EnrollmentsController < ApplicationController
   def enrollment_params
     params.require(:enrollment).permit(:student_id, :course_id)
   end
-  
 end

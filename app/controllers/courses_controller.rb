@@ -5,24 +5,24 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
-  end  
+  end
 
   def create
     @course = Course.new(course_params)
     if @course.save
       redirect_to @course, notice: "Course created Successfully!"
-    else 
+    else
       render :new, status: :unprocessable_entity
-    end  
+    end
   end
 
   def show
   @course = Course.find(params[:id])
   end
 
-  private 
+  private
 
   def course_params
     params.require(:course).permit(:title, :code)
-  end  
+  end
 end
