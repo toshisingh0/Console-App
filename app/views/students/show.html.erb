@@ -1,0 +1,14 @@
+<h1><%= @student.name %></h1>
+<p>Email: <%= @student.email %></p>
+
+<h3>Enrolled Courses:</h3>
+<ul>
+  <% @student.courses.each do |course| %>
+    <li>
+      <%= link_to course.title, course_path(course) %>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+<%= link_to "Back", root_path %>

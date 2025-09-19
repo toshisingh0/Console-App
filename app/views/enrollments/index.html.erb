@@ -1,0 +1,32 @@
+<h1>Enrollments</h1>
+
+<% if @student %>
+  <h2>Courses for <%= @student.name %></h2>
+  <% if @enrollments.any? %>
+    <ul>
+      <% @enrollments.each do |enrollment| %>
+        <li>
+          <%= enrollment.course.title %>
+          <%= link_to 'Unenroll', student_enrollment_path(@student, enrollment), method: :delete, data: { confirm: "Are you sure?" } %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No courses enrolled yet.</p>
+  <% end %>
+<% else %>
+  <h2>All Enrollments</h2>
+  <% if @enrollments.any? %>
+    <ul>
+      <% @enrollments.each do |enrollment| %>
+        <li>
+          <%= enrollment.student.name %> enrolled in <%= enrollment.course.title %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No enrollments found.</p>
+  <% end %>
+<% end %>
+<%= link_to "Add Enrollment", new_enrollment_path %> |
+<%= link_to "Back", root_path %>

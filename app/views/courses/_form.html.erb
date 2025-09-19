@@ -1,0 +1,28 @@
+<h1>New Course</h1>
+
+<%= form_with(model: @course, local: true) do |form| %>
+  <% if @course.errors.any? %>
+    <div style="color: red;">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+      <ul>
+        <% @course.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :code %><br>
+    <%= form.text_field :code %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Course" %>
+  </div>
+<% end %>

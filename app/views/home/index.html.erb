@@ -1,0 +1,41 @@
+<!-- app/views/home/index.html.erb -->
+<div class="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4">
+  <div class="max-w-2xl w-full bg-white shadow-lg rounded-2xl p-8">
+    
+    <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">
+       Student-Course Management
+    </h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <ul>
+      <li>
+      <%= link_to " Add New Student", new_student_path, 
+          class: "w-full bg-indigo-500 text-white font-semibold py-3 px-4 rounded-xl shadow hover:bg-indigo-600 transition" %>          
+      </li>
+      <li>
+      <%= link_to " List All Students", students_path, 
+          class: "w-full bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-xl shadow hover:bg-gray-300 transition" %>             
+      </li>
+      <li>
+      <%= link_to " Add New Course", new_course_path, 
+          class: "w-full bg-green-500 text-white font-semibold py-3 px-4 rounded-xl shadow hover:bg-green-600 transition" %>             
+      </li>
+      <li>
+      <%= link_to " List All Courses", courses_path, 
+          class: "w-full bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-xl shadow hover:bg-gray-300 transition" %> 
+      </li>
+      <li>
+      <%= link_to "View Details", student_path(@student) %>
+      </li>
+        <li>
+       <%= link_to "View Details", course_path(@course) %>
+      </li>
+      <li><%= link_to "Enroll Student in Course", new_enrollment_path %></li>
+      <li><%= link_to "List Enrollments", enrollments_path %></li>
+    
+      </ul>                 
+    </div>
+  </div>
+</div>
+
+
