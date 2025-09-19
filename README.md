@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -27,3 +28,7 @@ Things you may want to cover:
 * ...
 
 # Console-aap
+=======
+# Console-App
+Console App
+>>>>>>> 51f5c19f3b3193a1e7008d3ddb8f5f32f7cdbea1
