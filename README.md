@@ -26,4 +26,3 @@ Things you may want to cover:
 
 * ...
 
-git remote add origin https://github.com/toshisingh0/EduConsole.git
