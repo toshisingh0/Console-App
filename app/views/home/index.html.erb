@@ -25,10 +25,10 @@
           class: "w-full bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-xl shadow hover:bg-gray-300 transition" %> 
       </li>
       <li>
-      <%= link_to "View Details", student_path(@student) %>
+      <%= link_to "Find Students in a Course", student_path(@student) %>
       </li>
         <li>
-       <%= link_to "View Details", course_path(@course) %>
+       <%= link_to "Find Courses for a Student", course_path(@course) %>
       </li>
       <li><%= link_to "Enroll Student in Course", new_enrollment_path %></li>
       <li><%= link_to "List Enrollments", enrollments_path %></li>

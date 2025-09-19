@@ -21,4 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
+ Students create index New
+ Courses create index New
+
 * ...
+
+git remote add origin https://github.com/toshisingh0/EduConsole.git
